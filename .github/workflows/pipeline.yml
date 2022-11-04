@@ -1,5 +1,6 @@
 name: CI?CD pipeline
-  on: push
+  on: 
+	branch: [feature, main] 
   job:
     job1:
       name: Running the first job

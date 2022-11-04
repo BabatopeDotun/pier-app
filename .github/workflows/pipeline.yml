@@ -1,0 +1,33 @@
+name: CI?CD pipeline
+  on: push
+  job:
+    job1:
+      name: Running the first job
+      runs-on: ubuntu-latest
+      steps: 
+        - run: echo "This first job is meant to display date "
+        - run: date
+
+    job2: 
+      name: Running job two
+      runs-on: windows-latest
+      steps: 
+        - run: echo "Forever young windows paspire "
+        - run: date
+
+    job3: 
+      name: Running 3rd Job
+      runs-on: macos-latest
+      steps: 
+        - run: echo "This is the 3rd Job"
+        - run: date
+
+    job4: 
+      name: Running the 4th Job
+      needs: [job1, job2,job3]
+      runs-on: ubuntu-latest
+      steps: 
+
+
+
+

@@ -2,7 +2,7 @@ name: CI?CD pipeline
 
 on: 
      push:
-	 branch: [feature, main] 
+	 branches: [feature, main] 
 	  job:
 	    Ubuntujob1:
 	      runs-on: ubuntu-latest
